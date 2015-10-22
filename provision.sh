@@ -6,8 +6,10 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvR0/+SLLxnsNvNVED2nEtWFa6Giw+k1BZLW
 apt-get update
 apt-get upgrade
 apt-get install -y sudo mc git cpufrequtils sysfsutils apt-transport-https
+git config --global core.editor "mcedit"
 
 echo "\n\n#sid unstable \n deb http://ftp.uk.debian.org/debian unstable main contrib " >> /etc/apt/sources.list
+echo "Package: *\nPin: release a=jessie\nPin-Priority: 700\n\nPackage: * \nPin: release a=unstable\nPin-Priority: 50\n\n"
 
 apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
