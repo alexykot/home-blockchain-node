@@ -5,6 +5,6 @@ RUN echo "Package: *\nPin: release a=jessie\nPin-Priority: 700\n\nPackage: * \nP
 
 RUN apt-get update -qq && apt-get upgrade -y -qq 
 RUN apt-get install -y -qq mc git unzip curl rsync wget apt-utils 
-#iproute2 iptables
+RUN apt-get clean
 
 ENV TERM xterm

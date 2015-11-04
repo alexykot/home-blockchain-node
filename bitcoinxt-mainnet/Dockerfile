@@ -6,4 +6,5 @@ COPY tc.sh /root/tc.sh
 
 EXPOSE 8333
 
-CMD /usr/bin/bitcoind -conf=/root/bitcoin.mainnet.conf
+#CMD /usr/bin/bitcoinxt -conf=/root/bitcoin.mainnet.conf
+CMD /bin/sleep 10000

@@ -25,7 +25,7 @@ COPY tc.sh /root/tc.sh
 
 WORKDIR /
 
-EXPOSE 8545 30303 
+EXPOSE 8545 30303
 
 CMD /usr/local/bin/geth --identity "alexykot" --datadir "/root/.ethereum" --cache "64" --port "30303" --maxpeers "1024" --nat "any" --rpc --rpcaddr "0.0.0.0" --rpcport "8545" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --ipcdisable --shh --logfile "/var/log/ethereum/ethereum.log"
 
