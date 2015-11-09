@@ -1,9 +1,10 @@
-FROM local:bitcoind-base
+FROM local:bitcoinxt-base
 
-COPY bitcoin.testnet.conf /root/.bitcoin.testnet/bitcoin.testnet.conf
+COPY bitcoin.testnet.conf /etc/bitcoinxt/bitcoin.testnet.conf
 COPY tc.sh /root/tc.sh
 #RUN /root/tc.sh
 
 EXPOSE 18333
 
-CMD /usr/bin/bitcoind -conf=/root/.bitcoin.testnet/bitcoin.testnet.conf
+CMD /usr/bin/bitcoinxtd -conf=/etc/bitcoinxt/bitcoin.testnet.conf
+#CMD /bin/sleep 10000
