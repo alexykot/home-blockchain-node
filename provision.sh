@@ -5,7 +5,7 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYMKkvEMcENOkNCF1VsFe+aK3NiViEoJUt0k
 
 apt-get update
 apt-get upgrade
-apt-get install -y sudo mc git cpufrequtils sysfsutils apt-transport-https curl
+apt-get install -y sudo mc git cpufrequtils sysfsutils apt-transport-https curl ntp
 git config --global core.editor "mcedit"
 
 echo "\n\n#sid unstable \n deb http://ftp.uk.debian.org/debian unstable main contrib " >> /etc/apt/sources.list
